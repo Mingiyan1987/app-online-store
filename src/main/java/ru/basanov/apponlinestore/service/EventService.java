@@ -9,8 +9,6 @@ import ru.basanov.apponlinestore.model.Event;
 import ru.basanov.apponlinestore.model.EventType;
 import ru.basanov.apponlinestore.repository.EventRepository;
 
-import java.util.List;
-
 @Service
 public class EventService {
 
@@ -32,10 +30,6 @@ public class EventService {
         Page<Event> events = eventRepository.findAll(pageable);
 
         return events;
-    }
-
-    public List<Event> getAllEventList() {
-        return null;
     }
 
     public Page<Event> findByType(EventType filter, Pageable pageable) {
