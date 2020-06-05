@@ -36,5 +36,8 @@ public class EventService {
         return eventRepository.findByType(filter, pageable);
     }
 
-
+    @Transactional
+    public void deleteById(Long id) {
+        eventRepository.deleteById(id);
+    }
 }

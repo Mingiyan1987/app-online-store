@@ -8,11 +8,11 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "event")
+@Table(name = "product")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Event {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,12 +26,6 @@ public class Event {
     private Date date;
 
     @Enumerated(EnumType.STRING)
-    private EventType type;
+    private ProductStatus status;
 
-    public Event(Long id, String name, Date date, EventType eventType) {
-        this.id = id;
-        this.name = name;
-        this.date = date;
-        this.type = eventType;
-    }
 }
