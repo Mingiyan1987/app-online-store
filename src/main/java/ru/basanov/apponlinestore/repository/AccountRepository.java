@@ -10,5 +10,6 @@ import ru.basanov.apponlinestore.model.AccountStatus;
 @Repository
 public interface AccountRepository extends PagingAndSortingRepository<Account, Long> {
 
-    Page<Account> findByAccountStatus(AccountStatus filter, Pageable pageable);
+    //Page<Account> findAccountByAccountStatus(AccountStatus status, Pageable pageable);
+
 }

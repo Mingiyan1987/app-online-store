@@ -9,6 +9,12 @@ import ru.basanov.apponlinestore.model.Account;
 import ru.basanov.apponlinestore.model.AccountStatus;
 import ru.basanov.apponlinestore.repository.AccountRepository;
 
+import java.util.List;
+import java.util.Spliterator;
+import java.util.Spliterators;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
 @Service
 public class AccountService {
 
@@ -31,11 +37,11 @@ public class AccountService {
 
         return accounts;
     }
-
-    public Page<Account> findByAccountStatus(AccountStatus filter, Pageable pageable) {
-        return accountRepository.findByAccountStatus(filter, pageable);
+/*
+    public Page<Account> findAccountByAccountStatus(AccountStatus filter, Pageable pageable) {
+        return accountRepository.findAccountByAccountStatus(filter, pageable);
     }
-
+*/
     @Transactional
     public void deleteAll() {
         accountRepository.deleteAll();
@@ -44,5 +50,10 @@ public class AccountService {
     @Transactional
     public void deleteById(Long id) {
         accountRepository.deleteById(id);
+    }
+
+    public List<Account> getAll() {
+        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(accountRepository.findAll().iterator(), Spliterator.ORDERED), false)
+                .collect(Collectors.toList());
     }
 }

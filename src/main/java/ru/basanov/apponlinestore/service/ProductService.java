@@ -5,8 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.basanov.apponlinestore.model.Product;
-import ru.basanov.apponlinestore.model.ProductStatus;
+import ru.basanov.apponlinestore.model.product.Product;
+import ru.basanov.apponlinestore.model.order.ProductStatus;
 import ru.basanov.apponlinestore.repository.ProductRepository;
 
 @Service

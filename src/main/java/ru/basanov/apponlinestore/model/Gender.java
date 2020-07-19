@@ -1,16 +1,14 @@
 package ru.basanov.apponlinestore.model;
 
-public enum ProductStatus {
+public enum Gender {
 
-    Create("Товар создан"),
+    MALE("Мужской пол"),
 
-    Publish("Товар опубликован для продажи"),
-
-    Deleted("Товар удален");
+    FEMALE("Женский пол");
 
     private String description;
 
-    ProductStatus(String description) {
+    Gender(String description) {
         this.description = description;
     }
 

@@ -16,7 +16,6 @@ public class Role {
     @Column
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
     @ManyToOne

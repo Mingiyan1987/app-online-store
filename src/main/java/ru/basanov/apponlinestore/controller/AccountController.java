@@ -53,11 +53,17 @@ public class AccountController {
                                         @PathVariable(value = "pageNo") int pageNo) {
 
         Pageable sortedByDate = PageRequest.of(pageNo, PAGE_SIZE, Sort.by("date").ascending());
-
+/*
         if (accountStatus != null) {
-            return accountService.findByAccountStatus(accountStatus, sortedByDate);
+            return accountService.findAccountByAccountStatus(accountStatus, sortedByDate);
         }
+*/
         return accountService.getAll(sortedByDate);
+    }
+
+    @GetMapping("/account/averageAge")
+    public Double getAverage() {
+        return accountService.getAll().stream().mapToInt(Account::getAge).average().getAsDouble();
     }
 
 }
