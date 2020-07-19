@@ -8,9 +8,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import ru.basanov.apponlinestore.model.Account;
-import ru.basanov.apponlinestore.model.AccountStatus;
-import ru.basanov.apponlinestore.service.AccountService;
+import ru.basanov.apponlinestore.model.user.Account;
+import ru.basanov.apponlinestore.model.user.AccountStatus;
+import ru.basanov.apponlinestore.service.user.AccountService;
 
 @RestController
 public class AccountController {

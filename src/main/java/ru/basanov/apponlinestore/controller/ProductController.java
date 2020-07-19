@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import ru.basanov.apponlinestore.model.product.Product;
 import ru.basanov.apponlinestore.model.order.ProductStatus;
-import ru.basanov.apponlinestore.service.ProductService;
+import ru.basanov.apponlinestore.service.product.ProductService;
 
 @RestController
 public class ProductController {

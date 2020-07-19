@@ -3,7 +3,7 @@ package ru.basanov.apponlinestore.model.product.feature.params;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.basanov.apponlinestore.model.ProductTemplate;
+import ru.basanov.apponlinestore.model.product.ProductTemplate;
 
 import javax.persistence.*;
 import java.util.ArrayList;

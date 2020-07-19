@@ -4,7 +4,7 @@ import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.basanov.apponlinestore.model.Account;
+import ru.basanov.apponlinestore.model.user.Account;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

@@ -4,8 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.basanov.apponlinestore.model.*;
+import ru.basanov.apponlinestore.model.logistic.Supply;
 import ru.basanov.apponlinestore.model.order.OrderElement;
 import ru.basanov.apponlinestore.model.order.ProductStatus;
+import ru.basanov.apponlinestore.model.user.Account;
 
 import javax.persistence.*;
 import java.util.*;

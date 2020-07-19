@@ -2,7 +2,7 @@ package ru.basanov.apponlinestore.model.product;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.basanov.apponlinestore.model.Account;
+import ru.basanov.apponlinestore.model.user.Account;
 import ru.basanov.apponlinestore.model.order.OrderElement;
 
 import javax.persistence.*;

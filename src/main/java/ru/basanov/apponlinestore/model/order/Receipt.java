@@ -12,6 +12,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Table(name = "receipt")
 public class Receipt implements Serializable {
 
     @Id
