@@ -9,8 +9,6 @@ import ru.basanov.apponlinestore.model.Event;
 import ru.basanov.apponlinestore.model.EventType;
 import ru.basanov.apponlinestore.repository.EventRepository;
 
-import java.util.List;
-
 @Service
 public class EventService {
 
@@ -34,13 +32,12 @@ public class EventService {
         return events;
     }
 
-    public List<Event> getAllEventList() {
-        return null;
-    }
-
     public Page<Event> findByType(EventType filter, Pageable pageable) {
         return eventRepository.findByType(filter, pageable);
     }
 
-
+    @Transactional
+    public void deleteById(Long id) {
+        eventRepository.deleteById(id);
+    }
 }
